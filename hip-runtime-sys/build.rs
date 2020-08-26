@@ -4,7 +4,7 @@ fn main() {
     // link to hip
     let hip_lib = "/opt/rocm/hip/lib";
     println!("cargo:rustc-link-search=native={}", hip_lib);
-    println!("cargo:rustc-link-lib=dylib=hip_hcc");
+    println!("cargo:rustc-link-lib=dylib=amdhip64");
     
     #[cfg(feature = "bindgen")] {
     // The bindgen::Builder is the main entry point
